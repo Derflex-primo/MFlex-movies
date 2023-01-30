@@ -196,15 +196,20 @@ SEARCH STYLE
 
 .max__place {
     display: flex;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 .search {
     display: flex;
+    justify-content: center;
     align-items: center;
     background: #111010;
     height: 100vh;
     color: #fff;
     min-height: 500px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .home__intro {
@@ -236,7 +241,7 @@ input{
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;;
+    width: 100%;
     height: 42.5px;
     line-height: 30px;
     outline: 0;
@@ -264,7 +269,7 @@ input{
 
 form:hover,
 form:valid{
-    width: 200px;
+    width:400px;
     cursor: pointer;
 }
 
@@ -297,9 +302,17 @@ form:valid a {
   display: block;
 }
 
+.home__logo {
+    text-align: center;
+}
+
+
 .home__logo-pic {
    width: 450px;
 }
+
+ 
+
 
 /* 
 
@@ -322,7 +335,6 @@ MOVIES STYLE
 
 .movies {
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
     padding: 0 50px;
 }
@@ -368,6 +380,7 @@ MOVIES STYLE
 
 .movie__img:hover {
     transform: scale(1.03);
+    filter: contrast(0.6);
 }
  
 
