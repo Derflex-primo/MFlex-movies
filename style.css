@@ -9,6 +9,11 @@
 }
 
 
+
+body {
+    background-color: #111010;
+  }
+
 .max__width {
     max-width: 1300px;
     padding: 0 80px;
@@ -35,6 +40,7 @@ NAVBAR STYLE
     width: 100%;
     padding: 30px 0;
     transition: all 300ms ease;
+    z-index: 10000;
 }
 
 .navbar.sticky{
@@ -407,4 +413,79 @@ MOVIES STYLE
     font-size: 13px;
 }
  
+/* 
 
+DISCOVER
+
+*/
+
+
+.backDropimg {
+    width: 100%;
+    height: auto;
+    opacity: .6;
+  
+}
+
+.discover__backDrop {
+    background-size: cover;
+    position: relative;
+
+}
+
+.discover__wrapper--title {
+    
+   
+    position: absolute;
+    top: 50%;
+    left: 80px;
+}
+
+.discover__title {
+    font-size: 110px;
+    color: #e7d0d0;
+}
+
+.discover__title--para {
+    color: #fff7f7;
+    max-width: 700px;
+    font-size: 16px;
+    padding-left: 8px;
+  
+
+}
+
+.discover__title--releaseDate {
+    font-weight: 300;
+    color: rgb(92, 77, 77);
+    font-size: 14px;
+    padding-bottom: 2px;
+    padding-left: 6px;
+    font-family: monospace, consolas;
+}
+
+.discover__play {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 550;
+    padding: 0px 0px 0px  8px;
+    color: #000000;
+}
+
+
+
+.fa-play {
+
+    font-size: 18px;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 15px 38px;
+    background-color: rgb(255, 255, 255);
+    color: #080303;
+    border-radius: 4px;
+    
+}
+
+ 
+
+ 
