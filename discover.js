@@ -2,6 +2,9 @@ const API_KEY = "api_key=59a2cc2fa5db4670eabfee80c179fa9a";
 const BASE_URL = "https://api.themoviedb.org/3";
 const API_URL = `/discover/movie?sort_by=popularity.desc&${API_KEY}`;
 
+
+document.addEventListener('contextmenu', event => event.preventDefault());
+
 async function getDiscover() {
   try {
     const response = await fetch(BASE_URL + API_URL);
@@ -14,23 +17,28 @@ async function getDiscover() {
 }
 
 function placeDiscover(movie) {
-    if (!movie.backdrop_path) {
-      return null;
-    }
-  
-    // Split the movie title into words
-    const words = movie.title.split(" ");
-  
-    // Check if the number of words is 4 or more
-    const shouldReduceFontSize = words.length >= 4;
-  
-    // Apply the appropriate class based on the condition
-    const titleClass = shouldReduceFontSize ? "discover__title reduced-font" : "discover__title";
-  
-    // Reduce font size by 70px for titles with 4 or more words
-    const title = shouldReduceFontSize ? `<span style="font-size: 70px">${movie.title}</span>` : movie.title;
-  
-    return `
+  if (movie.title === "Mission: Impossible - Dead Reckoning Part One") {
+    return null;
+  }
+  if (!movie.backdrop_path) {
+    return null;
+  }
+
+  // Split the movie title into words
+  const words = movie.title.split(" ");
+
+  // Check if the number of words is 4 or more
+  const shouldReduceFontSize = words.length >= 4;
+
+  const movieDecription = movie.overview
+
+  // Apply the appropriate class based on the condition
+  const titleClass = shouldReduceFontSize ? "discover__title reduced-font" : "discover__title";
+
+  // Reduce font size by 70px for titles with 4 or more words
+  const title = shouldReduceFontSize ? `<span style="font-size: 70px">${movie.title}</span>` : movie.title;
+
+  return `
       <div class="swiper-slide">
         <img class="backDropimg" src="https://image.tmdb.org/t/p/original/${movie.backdrop_path}" alt="">
         <div class="discover__wrapper--title">
@@ -40,9 +48,9 @@ function placeDiscover(movie) {
           <i class="fa-solid fa-play"><a class="discover__play" href="">Play</a></i>   
         </div>
       </div>`;
-  }
-  
-  
+}
+
+
 
 async function populateDiscover() {
   try {
@@ -71,12 +79,8 @@ document.addEventListener('DOMContentLoaded', function () {
       onlyInViewport: false,
     },
     mousewheel: {
-      invert: true,
+      invert: false,
     },
-    autoplay: {
-      delay: 4000,
-    },
-    loop: true,
 
   });
 

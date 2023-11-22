@@ -15,15 +15,24 @@
             <div class="logo"><a href="#" class="navbar__logo"><span class="text-color1">M</span><span class="text-color">Flex!</span></a></div>
             <ul class="menu">
                 <li class="navbar__li"><a href="/index.html" class="navbar__a">Home</a></li>
-                <li class="navbar__li"><a href="#" class="navbar__a">About</a></li>
-                <li class="navbar__li"><a href="#" class="navbar__a">Sign Up</a></li>
-                <li class="navbar__li"><a href="#" class="navbar__a">Log In</a></li>
+                <li class="navbar__li"><a href="#" id="aboutLink" class="navbar__a">About</a></li>
+                <li class="navbar__li"><a href="#" id="signupLink" class="navbar__a">Sign Up</a></li>
+                <li class="navbar__li"><a href="#" id="loginLink" class="navbar__a">Log In</a></li>
             </ul>
             <div class="menu-btn">
                 <i class="fas fa-bars"></i>
             </div>
         </div>
     </nav>
+    <script>
+        document.getElementById('aboutLink').addEventListener('click', showAlert);
+        document.getElementById('signupLink').addEventListener('click', showAlert);
+        document.getElementById('loginLink').addEventListener('click', showAlert);
+
+        function showAlert() {
+            alert('The platform is currently under maintenance. We appreciate your patience!');
+        }
+    </script>
 
     <!--HOME SECTION-->
 
@@ -32,7 +41,7 @@
             <div class="home-content">
                 <div class="text-1"><span class="text-color1">M</span><span class="text-color">Flex!</span></div>
                 <div class="text-2">Watch Your Desired Movies And have Fun</div>
-                <div class="text-2" id="text-stream" ><a href="./search.html" target="_blank" class="text-color"> <b>Stream now.</b></a></div>
+                <div class="text-2" id="text-stream" ><a href="./discover.html" target="_blank" class="text-color"> <b>Stream now.</b></a></div>
             </div>
         </div>
     </section>

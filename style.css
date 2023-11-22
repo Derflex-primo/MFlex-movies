@@ -16,7 +16,6 @@ body {
 
 .max__width {
     max-width: 1300px;
-    padding: 0 80px;
     margin: 0 auto;
 }
 
@@ -465,6 +464,7 @@ DISCOVER
 }
 
 .discover__play {
+    cursor: not-allowed;
     text-transform: uppercase;
     font-size: 16px;
     font-weight: 550;
